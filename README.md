@@ -1,10 +1,19 @@
 # Shreypardy
 
-To run this, you need to have both SDL2 and SLD2_image which can be found
-here, https://www.libsdl.org/download-2.0.php.
+To run this, you need to have both SDL2 and SLD2_image which can be found here, https://www.libsdl.org/download-2.0.php. Ensure the repository for the game has access to these files!
 
-NOTE: this game was made for my frined's birthday, and it unfortunately 
-	gave him alcohol poisoning, please don't play it with vodka!
+This drinking game was made for my frined's birthday, and it unfortunately gave him alcohol poisoning, please don't play it with vodka, and stay safe!
+
+The constants found in RenderWindow.cpp dictate the size of the screen (screenWidth and screenHeight) and the size of the questions (qWidth, qHeight) appearing on the screen, changing these will preserve the formatting of the game, however, they are currently at the recommended sizes. You will also find constant defining the size of the spaces between the quesiton cards, these are automatic, although they can also be changed if desired. You can add different sets of graphics which can be easily interchanged by changing the constant setnum to the number of the directory. In order to load graphics, you need the following paths:
+
+	- /graphics/set(number)/Background.png ~ stores the background in the front page, should be sized to the screen size of choice (in px)
+	- /graphics/set(number)/Score.png ~ stores the screen displaying message to choose player's score, should be sized to the screen size of choice (in px)
+	- /graphics/set(number)/Cards/Players/Player(number).png ~ you can have up to 8 players, card should be size to quesiton card sie (in px)
+	- /graphics/set(number)/Cards/QuestionBack/QuestionBack(number).png ~ 0 <= number < 30, card should be size to quesiton card sie (in px)
+	- /graphics/set(number)/Cards/QuestionFront/QuestionFront(number).png ~ 0 <= number < 30, card should be size to quesiton card sie (in px)
+	- /graphics/set(number)/Cards/Values/Value(number).png ~ you can add as many values as you want, just make sure to account for the values in AllQuestions.cpp, card should be size to quesiton card sie (in px)
+	- /graphics/set(number)/Headers/Header(number).png ~ each of these headers are part of an animation, you can also just add one header which will then note animate, but make sure to scan main.cpp for the loops that animate the header in order to change it, also look out for the boolean animated!
+
 
 ******************************************************
 	         !!!  SHREYPARDY RULES !!!
